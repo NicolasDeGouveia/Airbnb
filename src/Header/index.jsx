@@ -20,10 +20,17 @@ export default function Header() {
           <div className="border-r border-gray-400">
             <p className="text-sm mx-3">Une semaine</p>
           </div>
-          <div className="mx-3">
+          <div className="ml-3 flex justify-between items-center">
             <p className="text-sm text-gray-400 font-plight mr-2">
               Ajouter des voyageurs
             </p>
+            <div className="w-8 h-8">
+              <img
+                className="hidden w-full h-full object-none md:block rounded-[50%] bg-[#ff385c] p-1"
+                src={loupe}
+                alt=""
+              />
+            </div>
           </div>
         </div>
         <div className="md:hidden flex w-full justify-between items-center border border-gray-300 py-4 px-3 rounded-[30px] shadow h-[60%] hover:cursor-pointer hover:shadow-lg">
