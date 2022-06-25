@@ -1,4 +1,6 @@
+import Card from "./Card";
 import Filter from "./Filter";
+import Footer from "./Footer/Footer";
 import Header from "./Header";
 import Main from "./Main";
 
@@ -7,7 +9,9 @@ function App() {
     <div>
       <Header />
       <Filter />
-      <Main />
+      <Footer />
+      <Main card={<Card />} />
+
     </div>
   );
 }
