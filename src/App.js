@@ -7,7 +7,7 @@ import Main from "./Main";
 function App() {
   return (
     <div>
-      <div className="sticky top-0 bg-[#fafafa] w-full h-[143px]">
+      <div className="sticky top-0 bg-[#fafafa] w-full h-[143px] z-50">
         <Header />
         <Filter />
       </div>

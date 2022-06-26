@@ -2,7 +2,7 @@ import { TbWorld } from "react-icons/tb";
 
 export default function Footer() {
   return (
-    <div className="w-full h-[70px] px-20 border border-t-1 border-gray-300 fixed bottom-0 bg-[#fafafa]">
+    <div className="w-full h-[70px] px-20 border border-t-1 border-gray-300 fixed bottom-0 bg-[#fafafa] z-50">
       <div className="w-full h-full flex justify-between items-center font-poppins">
         <ul className="flex flex-1 flex-wrap text-sm">
           <li className="font-plight">

@@ -1,4 +1,5 @@
 import { IoStarSharp } from "react-icons/io5";
+import { ImHeart } from "react-icons/im";
 import axios from "axios";
 import { useState, useEffect } from "react";
 
@@ -18,15 +19,22 @@ export default function Card() {
     contentData();
   }, []);
 
+  const style = {};
   return (
     <>
       {dataContent.map((item) => (
-        <div key={item.id} className="max-w-xs w-full text-sm">
+        <div key={item.id} className="max-w-xs w-full text-sm relative">
           <img
-            className="w-full h-[200px] object-cover rounded-xl"
+            className="w-full h-[200px] object-cover rounded-xl "
             src={item.Picture}
             alt="/"
           />
+          <div className="absolute top-2 right-2">
+            <ImHeart
+              size={20}
+              style={{ stroke: "#fff", "stroke-width": "1", opacity: "0.8" }}
+            />
+          </div>
           <div className="flex justify-between items-center">
             <p className="text-sm font-poppins mt-2">{item.country}</p>
             <p className="flex items-center">
