@@ -22,7 +22,7 @@ export default function Filter() {
       />
       <div
         id={"slider"}
-        className="overflow-x-hidden overflow-y-hidden scroll-smooth scrollbar-hide relative "
+        className="overflow-x-auto md:overflow-x-hidden scroll-smooth scrollbar-hide relative "
       >
         <div className="w-full  grid gap-[32px] grid-flow-col-dense justify-between items-center ">
           {Icons.map((icon) => (
