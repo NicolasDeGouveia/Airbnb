@@ -1,8 +1,11 @@
 import Icons from "../data/icons";
 import option from "../assets/pictures/option.png";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import { useEffect, useState } from "react";
 
 export default function Filter() {
+  const [shadow, setShadow] = useState(false);
+
   const slideLeft = () => {
     const slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 500;
@@ -13,8 +16,26 @@ export default function Filter() {
     slider.scrollLeft = slider.scrollLeft + 500;
   };
 
+  useEffect(() => {
+    const handleShadow = () => {
+      if (window.scrollY >= 50) {
+        setShadow(true);
+      } else {
+        setShadow(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleShadow);
+  }, []);
+
   return (
-    <div className="w-full h-[80px] flex justify-between items-center px-20 pt-5 relative ">
+    <div
+      className={
+        shadow
+          ? "w-full h-[80px] flex justify-between items-center px-20 pt-5 relative shadow-xl -translate-y-4 duration-75 "
+          : "w-full h-[80px] flex justify-between items-center px-20 pt-5 relative "
+      }
+    >
       <IoIosArrowBack
         size={25}
         onClick={slideLeft}
@@ -37,7 +58,9 @@ export default function Filter() {
                   ".jpg")}
                 alt=""
               />
-              <p className="text-xs text-gray-300 font-poppins">{icon.name} </p>
+              <p className="text-xs text-[#717171] font-poppins">
+                {icon.name}{" "}
+              </p>
             </div>
           ))}
         </div>

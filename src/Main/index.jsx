@@ -1,6 +1,6 @@
 export default function Main({ card }) {
   return (
-    <div className="w-full h-full px-20">
+    <div className="w-full h-full px-20 mt-6">
       <div>
         <p className="mb-6">Classement par ordre de pertinence</p>
       </div>

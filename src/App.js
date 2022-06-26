@@ -7,8 +7,10 @@ import Main from "./Main";
 function App() {
   return (
     <div>
-      <Header />
-      <Filter />
+      <div className="sticky top-0 bg-[#fafafa] w-full h-[143px]">
+        <Header />
+        <Filter />
+      </div>
       <Footer />
       <Main card={<Card />} />
 
