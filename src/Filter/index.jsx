@@ -32,8 +32,8 @@ export default function Filter() {
     <div
       className={
         shadow
-          ? "w-full h-[80px] flex justify-between items-center px-20 pt-5 relative shadow-xl -translate-y-4 duration-75 "
-          : "w-full h-[80px] flex justify-between items-center px-20 pt-5 relative "
+          ? "w-full h-[80px] flex justify-between items-center px-6 md:px-20 pt-5 relative shadow-xl -translate-y-4 duration-75 "
+          : "w-full h-[80px] flex justify-between items-center px-6 md:px-20 pt-5 relative shadow-xl md:shadow-none "
       }
     >
       <IoIosArrowBack
