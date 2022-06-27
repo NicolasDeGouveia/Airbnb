@@ -20,8 +20,8 @@ function App() {
         <Nav isOpen={isOpen} />
         <Filter />
       </div>
+      <Main />
       <Footer />
-      <Main card={<Card />} />
 
     </div>
   );
