@@ -87,7 +87,7 @@ const Icons = [
   {
     id: 18,
     picture: "chalets",
-    name: "Châlets Tipi"
+    name: "Chalets Tipi"
   },
   {
     id: 19,

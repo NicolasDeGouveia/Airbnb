@@ -49,7 +49,7 @@ export default function Filter() {
           {Icons.map((icon) => (
             <div
               key={icon.id}
-              className="flex flex-col justify-center items-center w-max"
+              className="flex flex-col justify-center items-center w-max cursor-pointer"
             >
               <img
                 className="h-[30px]"

@@ -5,7 +5,7 @@ import { FaBars } from "react-icons/fa";
 import loupe from "../assets/pictures/loupe.png";
 import option from "../assets/pictures/option.png";
 
-export default function Header() {
+export default function Header({ toggle }) {
   return (
     <div className="w-full h-[80px] px-20 border border-t-0 border-gray-300 ">
       <div className="w-full h-full flex justify-between items-center font-poppins">
@@ -51,7 +51,10 @@ export default function Header() {
           <div className=" w-10 h-10 hover:bg-gray-100 hover:cursor-pointer flex justify-center items-center rounded-[50px]">
             <TbWorld className="w-[18px] h-[18px]" />
           </div>
-          <div className="ml-2 flex justify-center items-center p-1 border border-gray-300 rounded-[30px] hover:shadow-md hover:cursor-pointer">
+          <div
+            onClick={toggle}
+            className="ml-2 flex justify-center items-center p-1 border border-gray-300 rounded-[30px] hover:shadow-md hover:cursor-pointer"
+          >
             <div className="mr-2">
               <FaBars />
             </div>
