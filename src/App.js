@@ -8,11 +8,16 @@ import Nav from "./Nav";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClick, setIsClick] = useState(false)
 
   const handleToggle = () => {
     setIsOpen(!isOpen)
   }
-  console.log(isOpen);
+
+  const handleToggleClick = () => {
+    setIsClick(!isClick)
+  }
+  console.log(isClick);
   return (
     <div>
       <div className="sticky top-0 bg-[#fafafa] w-full h-[143px] z-50">
@@ -21,7 +26,7 @@ function App() {
         <Filter />
       </div>
       <Main />
-      <Footer />
+      <Footer toggle={handleToggleClick} isClick={isClick} />
 
     </div>
   );
