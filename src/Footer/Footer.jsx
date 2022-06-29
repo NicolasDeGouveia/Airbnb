@@ -18,7 +18,7 @@ export default function Footer({ toggle, isClick }) {
             className={
               isClick
                 ? "px-6 py-8 md:bg-white md:rounded-t-xl md:flex md:justify-between md:w-full md:h-[60%] md:fixed md:bottom-0  md:right-0 md:duration-300 md:ease-in md:px-20 md:mt-12"
-                : "px-6 py-8  h-auto bg-gray-100 border-t border-gray-200 md:w-full h-[60%]  md:fixed md:bottom-[-190%] md:right-0 md:duration-300 md:ease-in"
+                : "px-6 py-8  h-auto bg-gray-100 border-t border-gray-200 md:w-full md:h-[60%]  md:fixed md:bottom-[-190%] md:right-0 md:duration-300 md:ease-in"
             }
           >
             <div

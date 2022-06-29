@@ -3,7 +3,7 @@ import option from "../assets/pictures/option.png";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useEffect, useState } from "react";
 
-export default function Filter() {
+export default function Filter({ toggle }) {
   const [shadow, setShadow] = useState(false);
 
   const slideLeft = () => {
@@ -70,7 +70,10 @@ export default function Filter() {
         onClick={slideRight}
         className="hidden md:block absolute z-10 right-[15%] top-7 translate-x-2/4 cursor-pointer hover:shadow-lg border border-gray-300 hover:scale-110 hover:duration-100 rounded-full"
       />
-      <div className="hidden md:flex md:justify-center md:items-center md:py-4  md:border md:border-gray-300 md:rounded-[12%] md:p-5 md:ml-4">
+      <div
+        onClick={toggle}
+        className="hidden md:flex md:justify-center md:items-center md:py-4  md:border md:border-gray-300 md:rounded-[12%] md:p-5 md:ml-4 cursor-pointer"
+      >
         <img className="h-[18px]" src={option} alt="/" />
         <p className="text-xs font-semibold">Filtres</p>
       </div>

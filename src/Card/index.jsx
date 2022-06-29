@@ -32,7 +32,7 @@ export default function Card() {
           <div className="absolute top-2 right-2">
             <ImHeart
               size={20}
-              style={{ stroke: "#fff", "stroke-width": "1", opacity: "0.8" }}
+              style={{ stroke: "#fff", strokeWidth: "1", opacity: "0.8" }}
             />
           </div>
           <div className="flex justify-between items-center">
