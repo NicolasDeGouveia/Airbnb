@@ -5,11 +5,11 @@ import { navOne, navTwo, navThree, navFour } from "../data/navFooter";
 
 export default function Footer({ toggle, isClick }) {
   return (
-    <div className="w-full mt-8 md:h-[70px] md:px-20 border md:border-t-1 md:border-gray-300 relative md:fixed md:bottom-0 bg-gray-100 md:bg-[#fafafa] md:z-50">
+    <div className="w-full mt-8 flex md:h-[70px] md:px-20 border md:border-t-1 md:border-gray-300 relative md:fixed md:bottom-0 bg-gray-100 md:bg-[#fafafa] md:z-50">
       <div
         className={
           isClick
-            ? "md:fixed md:left-0 md:top-0 md:w-full md:h-screen md:bg-black/70"
+            ? "md:fixed md:left-0 md:top-0 md:w-full md:h-screen md:duration-300 md:ease-in md:bg-[#7a7a7a]/70"
             : ""
         }
       >
@@ -17,8 +17,8 @@ export default function Footer({ toggle, isClick }) {
           <div
             className={
               isClick
-                ? "px-6 py-8  md:bg-white md:rounded-xl md:flex md:justify-between md:w-full md:h-[60%] md:fixed md:bottom-0  md:right-0 md:duration-700 md:ease-in md:px-20 md:mt-12"
-                : "px-6 py-8  bg-gray-100 border-t border-gray-200 md:w-full h-[60%]  md:fixed md:bottom-[-190%] md:right-0 md:duration-700 md:ease-in"
+                ? "px-6 py-8  md:bg-white md:rounded-t-xl md:flex md:justify-between md:w-full md:h-[60%] md:fixed md:bottom-0  md:right-0 md:duration-300 md:ease-in md:px-20 md:mt-12"
+                : "px-6 py-8  bg-gray-100 border-t border-gray-200 md:w-full h-[60%]  md:fixed md:bottom-[-190%] md:right-0 md:duration-300 md:ease-in"
             }
           >
             <div
@@ -87,7 +87,7 @@ export default function Footer({ toggle, isClick }) {
             </section>
           </div>
 
-          <ul className="flex flex-1 flex-wrap text-sm">
+          <ul className={isClick ? "hidden" : "flex flex-1 flex-wrap text-sm"}>
             <li className="font-plight">
               © 2022 Airbnb, Inc.<span className="pl-2">·</span>
             </li>
@@ -105,7 +105,7 @@ export default function Footer({ toggle, isClick }) {
             </li>
             <li className="font-plight">Infos sur l'entreprise</li>
           </ul>
-          <ul className="flex text-sm font-poppins ">
+          <ul className={isClick ? "hidden" : "flex text-sm font-poppins "}>
             <li className="pr-6 flex items-center">
               <span className="pr-2">
                 <TbWorld />
