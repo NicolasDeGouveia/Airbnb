@@ -17,8 +17,8 @@ export default function Footer({ toggle, isClick }) {
           <div
             className={
               isClick
-                ? "px-6 py-8  md:bg-white md:rounded-t-xl md:flex md:justify-between md:w-full md:h-[60%] md:fixed md:bottom-0  md:right-0 md:duration-300 md:ease-in md:px-20 md:mt-12"
-                : "px-6 py-8  bg-gray-100 border-t border-gray-200 md:w-full h-[60%]  md:fixed md:bottom-[-190%] md:right-0 md:duration-300 md:ease-in"
+                ? "px-6 py-8 md:bg-white md:rounded-t-xl md:flex md:justify-between md:w-full md:h-[60%] md:fixed md:bottom-0  md:right-0 md:duration-300 md:ease-in md:px-20 md:mt-12"
+                : "px-6 py-8  h-auto bg-gray-100 border-t border-gray-200 md:w-full h-[60%]  md:fixed md:bottom-[-190%] md:right-0 md:duration-300 md:ease-in"
             }
           >
             <div
@@ -87,32 +87,54 @@ export default function Footer({ toggle, isClick }) {
             </section>
           </div>
 
-          <ul className={isClick ? "hidden" : "flex flex-1 flex-wrap text-sm"}>
+          <ul
+            className={
+              isClick
+                ? "md:hidden  flex flex-1 flex-wrap text-xs"
+                : "flex flex-1 flex-wrap text-xs"
+            }
+          >
             <li className="font-plight">
               © 2022 Airbnb, Inc.<span className="pl-2">·</span>
             </li>
-            <li className="font-plight pl-2">
-              Confidentialité<span className="pl-2">·</span>
+            <li className="font-plight pl-2 cursor-pointer hover:underline">
+              Confidentialité
             </li>
-            <li className="font-plight pl-2">
-              Conditions générales<span className="pl-2">·</span>
+            <span className="pl-2">·</span>
+            <li className="font-plight pl-2 cursor-pointer hover:underline">
+              Conditions générales
             </li>
-            <li className="font-plight pl-2">
-              Plan du site<span className="pl-2">·</span>
+            <span className="pl-2">·</span>
+            <li className="font-plight pl-2 cursor-pointer hover:underline">
+              Plan du site
             </li>
-            <li className="font-plight pl-2">
-              Fonctionnement du site<span className="pl-2">·</span>
+            <span className="pl-2">·</span>
+            <li className="font-plight pl-2 cursor-pointer hover:underline">
+              Fonctionnement du site
             </li>
-            <li className="font-plight">Infos sur l'entreprise</li>
+            <span className="pl-2">·</span>
+            <li className="font-plight pl-2  cursor-pointer hover:underline">
+              Infos sur l'entreprise
+            </li>
+            <span className="pl-2">·</span>
+            <li className="font-plight pl-2  cursor-pointer hover:underline">
+              Destinations
+            </li>
           </ul>
-          <ul className={isClick ? "hidden" : "flex text-sm font-poppins "}>
-            <li className="pr-6 flex items-center">
+          <ul
+            className={
+              isClick
+                ? "hidden"
+                : "flex md:w-[35%] md:justify-between text-[14px] font-poppins "
+            }
+          >
+            <li className=" flex items-center">
               <span className="pr-2">
                 <TbWorld />
               </span>
               Français (FR)
             </li>
-            <li className="pr-6">
+            <li className="">
               <span className="pr-2">€</span> EUR
             </li>
             <li
